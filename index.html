@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>This page's layout is generated on the fly!</title>
+	<title>Layout Generator</title>
 	<script src="generator.js"></script>
+	<style>
+		* {
+			font-family: Helvetica, Arial;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		#main {
+			text-align: center;
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9AC932), to(#549428), to(#AA02E1));
+			border-radius: 9px;
+			border: 1px solid #4AA03D;
+		}
+		
+		#counter, #counter a {
+			font-family: monospace;
+		}
+		
+		button {
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: blue;
+			text-decoration: underline;
+		}
+		
+		output {
+			display: block;
+			width: 900px;
+			height: 120px;
+			margin: auto;
+			overflow-y: auto;
+		}
+		
+		output div {
+			width: 800px;
+			height: 100px;
+			margin: 5px auto;
+		}
+	</style>
 </head>
 <body>
-	
+	<div id="main">
+		What do you want to generate?<br><br>
+		<button>Panel</button> <button>Menu</button> | <button>Reset</button>
+		<output></output>
+		<div id="counter">[]</div>
+		<a href="javascript:prev()">previous</a> | <a href="javascript:next()">next</a>
+	</div>
 </body>
 </html>
